@@ -8,6 +8,11 @@
   yum:
     name: ['yum-utils', 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python3', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
     state: present
+    
+- name: Remove conflicting packages
+  yum:
+    name: python2-pip
+    state: removed
 
 - name: Install iSCSI initiation for some Kubernetes storage solutions
   yum:
