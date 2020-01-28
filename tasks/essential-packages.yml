@@ -6,7 +6,7 @@
 
 - name: Install essential packages
   yum:
-    name: ['yum-utils', 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python3', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
+    name: ['yum-utils', 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python-devel', 'python3', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
     state: present
     
 - name: Remove conflicting packages
